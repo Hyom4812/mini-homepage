@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/layout.css" />
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/diary.css" />
+    <script src="https://kit.fontawesome.com/1d5d6fa795.js" crossorigin="anonymous"></script>"
+  </head>
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+          <div class="column_left">
+            <div class="row_today_total"><span>TODAY </span><span style= "color : red;">28 </span><span>│ TOTAL </span><span>234918</span></div>
+            <div class="row_image_info box">
+              <div class="row_image"><img src="./static/images/moon.png" width="170" alt="달 사진" /></div>
+              <div class="row_info">
+                <p>ㄴr능,, ㄱr끔,,☆</p>
+                <p>눙물을,, 흘린ㄷF,,</p>
+                <p>cODinG은 └rㄹ├ㄱr</p>
+                <p>ㆅㅓ락한 유일한 ■r약™</p>
+              </div>
+              <div class="row_nickname">
+                <p>달님이예요</p>
+                <div class="pado">
+                  <div class="dropdown_btn box">
+                    <p>　파도타기　　　　　▼</p>
+                  </div>
+                  <div class="dropdown-content">
+                    <a href="https://cafe.naver.com/codeuniv" target="_blank">코뮤니티로 가기</a>
+                    <a href="https://www.instagram.com/coding_comu/" target="_blank">인스타그램으로 가기</a>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="column_right">
+            <div class="row_home">
+              <div class="column_home_name"> 달님이예요 홈페이지 </div>
+              <div class="column_home_address"> http://homepage...</div>
+            </div>
+            <div class="row_content box">
+                <div class="diary_contianer box">
+                    <div class="calendar_layer box">
+                        <div class="today">
+                            <p>02.22</br>MON</p>
+                        </div>
+                        <div class="date">
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                            <span class="date_blue">6</span>
+                            <span class="date_red">7</span>
+                            <span>8</span>
+                            <span>9</span>
+                            <span>10</span>
+                            <span>11</span>
+                            <span>12</span>
+                            <span class="date_blue">13</span>
+                            <span class="date_red">14</span>
+                            <span>15</span>
+                            <span>16</span>
+                            <span>17</span>
+                            <span>18</span>
+                            <span>19</span>
+                            <span class="date_blue">20</span>
+                            <span class="date_red">21</span>
+                            <span>22</span>
+                            <span>23</span>
+                            <span>24</span>
+                            <span>25</span>
+                            <span>26</span>
+                            <span class="date_blue">27</span>
+                            <span class="date_red">28</span>
+                        </div>                        
+                    </div>
+                    <div class="scroll_box box">
+                        <div class="diary_layer box">
+                          <div class="record_date">2021.02.22</div>
+                          <div class="diary_content">
+                            <p> 스크롤이 잘 먹어야 할 텐데 </p>
+                            <P> 한 번에 잘 될까? </P>
+                            <P> alt+B 눌렀을 때 </P>
+                            <P> 한 번에 잘 됐으면 좋겠다 </P>
+                            <P> 제발!!! ㅠㅠ </P>
+                          </div>
+                        </div>
+                        <div class="diary_layer box">
+                          <div class="record_date">2021.01.01</div>
+                          <div class="diary_content">
+                            <p> ㅎ2 </p>
+                            <P> 한 살 더 먹음 </P>
+                            <P> 기분 별로니까 , , </P>
+                            <P> 건들지 좀 마 </P>
+                          </div>
+                        </div>
+                        <div class="diary_layer box">            
+                          <div class="record_date">2020.12.31</div>
+                          <div class="diary_content">
+                              <p> 한 살 더 먹 는 거 </p>
+                              <P> 실 화 냐 ¿ </P>
+                              <P> 믿 기 지 가 않 는 ㄷF , , </P>
+                              <P> 누 가 </P>
+                              <P> 꿈 이 라 고 </P>
+                              <P> 말 해 줘 ¡</P>
+                          </div>                            
+                        </div>
+                        <div id="text" class="hidden"></div>
+                        <div class="secret_diary_btn" onclick="getTextFile()"><i class="fas fa-lock"></i>　비밀 다이어리 보기</div>
+                    </div>                 
+                </div>             
+            </div>
+          </div>
+          <div class="column_menu">
+            <div class="menu_margin_top"></div>
+            <div class="menu white_text"><a href="./home.html">　홈</a></div>
+            <div class="menu white_text"><a href="./diary.html">　다이어리</a></div>
+            <div class="menu white_text"><a href="./album.html">　사진첩</a></div>
+            <div class="menu white_text"><a href="./guest_book.html">　방명록</a></div>
+            <div class="menu_margin_bottom"></div>
+          </div>
+        </div>  
+      </div>
+    </div>
+    <script>
+        function getTextFile() {
+            var input = document.createElement("input");
+            input.type = "file";
+            input.accept = "text/plain";
+            input.onchange = function (event) {
+                processFile(event.target.files[0]);
+            };
+            input.click();
+        }
+        
+        function processFile(file) {
+            var reader = new FileReader();
+            reader.readAsText(file, "utf-8");
+
+            reader.onload = function() {
+                document.getElementById("text").innerText = reader.result;
+            };
+        }
+    </script>
+  </body>
+</html>

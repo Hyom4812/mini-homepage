@@ -1,0 +1,27 @@
+.album_contianer{
+    width: 560px;
+    height: 575px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.row_album_image_title{
+    background-color: rgb(225, 226, 226);
+    flex: 1;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.row_album_image{
+    flex: 6;
+    margin: 10px;
+}
+
+.row_album_text {
+    flex: 3;
+    font-size: 0.9em;
+    margin: 10px 10px 50px 10px;
+}
+
